@@ -4,14 +4,15 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pyinstaller = "*"
+pywin32-ctypes = {version = "*", sys_platform = "== 'win32'"}
 
 [packages]
 icrawler = "*"
-pyinstaller = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.7"
 
 [scripts]
 start = "python image_crawler.py"
-build = "pyinstaller image_crawler.py --onefile --noconsole"
+build = "pyinstaller image_crawler.py --onefile --noconsole --name image-crawler"
