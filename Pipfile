@@ -11,3 +11,7 @@ pyinstaller = "*"
 
 [requires]
 python_version = "3.8"
+
+[scripts]
+start = "python image_crawler.py"
+build = "pyinstaller image_crawler.py --onefile --noconsole"
